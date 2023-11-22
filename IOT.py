@@ -24,6 +24,16 @@ while True:
     x4, y4, w4, h4 = 50, 300, 150, 200
     x5, y5, w5, h5 = 250, 300, 150, 200
 
+    # Increase horizontal spacing between boxes in the top row
+    horizontal_spacing_top = 50
+    x2 += horizontal_spacing_top
+    x3 += horizontal_spacing_top * 2
+
+    # Increase horizontal spacing between boxes in the bottom row
+    horizontal_spacing_bottom = 50
+    x4 += horizontal_spacing_bottom
+    x5 += horizontal_spacing_bottom * 2
+
     # Draw rectangles and text for sensors in the top row
     cv2.rectangle(frame, (x1, y1), (x1 + w1, y1 + h1), (0, 255, 0), 2)
     cv2.rectangle(frame, (x2, y2), (x2 + w2, y2 + h2), (255, 0, 0), 2)
